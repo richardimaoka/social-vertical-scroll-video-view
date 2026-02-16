@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* For tall mobile screens (portrait), adjust video height */
+@media (max-aspect-ratio: 9/16) {
+  .video-container video {
+    height: auto;
+    width: 100%;
+  }
+}

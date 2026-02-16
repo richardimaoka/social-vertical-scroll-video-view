@@ -2,7 +2,7 @@
 
 export default function Home() {
   return (
-    <main className="h-screen overflow-y-auto snap-y snap-mandatory max-w-[56.25vh] mx-auto">
+    <main className="h-screen overflow-y-auto snap-y snap-mandatory mx-auto w-full lg:max-w-[56.25vh] video-container">
       <div className="h-screen bg-[#81A1C1] snap-start flex items-center justify-center">
         <video
           width="405"
