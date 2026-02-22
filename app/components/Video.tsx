@@ -19,9 +19,14 @@ export function Video(props: Props) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // console.log(entry.intersectionRatio, pathname, props);
+        // console.log(
+        //   "interesection observer callback, ratio =",
+        //   entry.intersectionRatio,
+        //   pathname,
+        //   props,
+        // );
         const targetPath = `/videos/${props.id}`;
-        if (entry.intersectionRatio >= 1 && pathname !== targetPath) {
+        if (entry.intersectionRatio >= 0.95 && pathname !== targetPath) {
           // alert("Video is 100% in view!");
           console.log(`window.history.pushState /videos/${props.id}`);
           window.history.pushState(null, "", targetPath);
@@ -29,7 +34,7 @@ export function Video(props: Props) {
       },
       {
         root: props.rootRef.current,
-        threshold: 1.0,
+        threshold: 0.95,
       },
     );
 

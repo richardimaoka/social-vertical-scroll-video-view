@@ -1,12 +1,10 @@
 "use client";
 
 // import Image from "next/image";
-
 import { useRef } from "react";
 import { Video } from "../../components/Video";
 
 export default function Home() {
-  console.log("Home");
   const videos = [
     {
       src: "/videos/1_屋外でアイスクリームを食べている女性_720x405.mp4",
